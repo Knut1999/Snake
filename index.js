@@ -1,1 +1,1 @@
-alert("Hello world");
+document.querySelector("h1").innerHTML = "goodBye";
