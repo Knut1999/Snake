@@ -1,1 +1,3 @@
-console.log("Hello World");
+function startSnake() {
+  console.log("Hello World");
+}
