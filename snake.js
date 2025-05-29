@@ -7,8 +7,8 @@ var context;
 
 window.onload = function () {
   board = document.getElementById("board");
-  board.height = rows * blockSize;
-  board.width = cols * blockSize;
+  board.height = rad * blockSize;
+  board.width = kolonner * blockSize;
   context = board.getContext("2d");
 
   update();
