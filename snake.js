@@ -36,7 +36,7 @@ function update() {
   context.fillStyle = "lime";
   context.fillRect(snakeX, snakeY, blockSize, blockSize);
   snakeX += velocityX;
-  snakey += velocityY;
+  snakeY += velocityY;
 
   context.fillStyle = "red";
   context.fillRect(foodX, foodY, blockSize, blockSize);
