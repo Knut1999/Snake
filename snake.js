@@ -45,7 +45,7 @@ function update() {
 function changeDirection(e) {
   if(e.code == "ArrowUp"){
     velocityX = 0;
-    VelocityY = -1;
+    velocityY = -1;
   }
   else if (e.code == "ArrowDown"){
     velocityX = 0;
