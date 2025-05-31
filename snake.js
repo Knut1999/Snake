@@ -18,7 +18,7 @@ window.onload = function () {
   board.height = rader * blockSize;
   board.width = kolonner * blockSize;
   context = board.getContext("2d"); //tegner brett
-  
+
   placeFood();
   update();
 }
@@ -37,5 +37,5 @@ function update() {
 
 function placeFood() {
   foodX = Math.floor(Math.random() * cols) * blockSize;
-  foodY = Math.floor(Math.random() * cols) * blockSize;
+  foodY = Math.floor(Math.random() * rows) * blockSize;
 }
