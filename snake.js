@@ -10,15 +10,16 @@ var snakeX = blockSize * 5;
 var snakeY = blockSize * 5;
 
 //food
-var foodX = blockSize * 10;
-var foodY = blockSize * 10;
+var foodX;
+var foodY;
 
 window.onload = function () {
   board = document.getElementById("board");
   board.height = rader * blockSize;
   board.width = kolonner * blockSize;
   context = board.getContext("2d"); //tegner brett
-
+  
+  placeFood();
   update();
 }
 
@@ -31,4 +32,10 @@ function update() {
 
   context.fillStyle = "red";
   context.fillRect(foodX, foodY, blockSize, blockSize);
+}
+
+
+function placeFood() {
+  foodX = Math.floor(Math.random() * cols) * blockSize;
+  foodY = Math.floor(Math.random() * cols) * blockSize;
 }
