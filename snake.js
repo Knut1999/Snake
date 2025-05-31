@@ -66,7 +66,7 @@ function update() {
   }
 
   //game over condition
-  if (snakeX < 0 || snakeX > kolonner * blockSize || snakeY < 0 || snakY > rader * blockSize){
+  if (snakeX < 0 || snakeX > kolonner * blockSize || snakeY < 0 || snakeY > rader * blockSize){
     GameOver = true;
     alert("Game Over")
   }
