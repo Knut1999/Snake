@@ -5,15 +5,19 @@ var kolonner = 20;
 var board;
 var context;
 
+//snake head
 var snakeX = blockSize * 5;
 var snakeY = blockSize * 5;
 
+//food
+var foodX = blockSize * 10;
+var foodY = blockSize * 10;
 
 window.onload = function () {
   board = document.getElementById("board");
   board.height = rader * blockSize;
   board.width = kolonner * blockSize;
-  context = board.getContext("2d");
+  context = board.getContext("2d"); //tegner brett
 
   update();
 }
@@ -24,4 +28,8 @@ function update() {
 
   context.fillStyle = "lime";
   context.fillRect(snakeX, snakeY, blockSize, blockSize);
+
+  context.fillStyle = "red";
+  context.fillRect = (foodX, foodY, blockSize, blockSize);
+
 }
