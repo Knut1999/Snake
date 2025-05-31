@@ -59,7 +59,7 @@ function changeDirection(e) {
     velocityX = -1;
     velocityY = 0;
   }
-  else if (e.code == "ArrowRight" && velocityX != 1){
+  else if (e.code == "ArrowRight" && velocityX != -1){
     velocityX = 1;
     velocityY = 0;
   }
