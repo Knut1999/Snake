@@ -9,8 +9,11 @@ var context;
 var snakeX = blockSize * 5;
 var snakeY = blockSize * 5;
 
-velocityX = 0;
-velocityY = 0;
+var velocityX = 0;
+var velocityY = 0;
+
+var snakeBody = [];
+
 
 //food
 var foodX;
@@ -37,13 +40,17 @@ function update() {
   context.fillRect(foodX, foodY, blockSize, blockSize);
 
   if(snakeX == foodX && snakeY == foodY){
+    snakeBody.push([foodX,foodY])
     placeFood();
   }
 
   context.fillStyle = "lime";
-  context.fillRect(snakeX, snakeY, blockSize, blockSize);
   snakeX += velocityX * blockSize;
   snakeY += velocityY * blockSize;
+  context.fillRect(snakeX, snakeY, blockSize, blockSize);
+  for (let i = 0; i < snakeBody.length; i++){
+    context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
+  }
 }
 
 function changeDirection(e) {
