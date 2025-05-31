@@ -26,7 +26,7 @@ window.onload = function () {
   document.addEventListener("keyup", changeDirection);
 
   //update();
-  setInterval(update, 100/10);
+  setInterval(update, 1000/10);
 }
 
 function update() {
@@ -35,8 +35,8 @@ function update() {
 
   context.fillStyle = "lime";
   context.fillRect(snakeX, snakeY, blockSize, blockSize);
-  snakeX += velocityX;
-  snakeY += velocityY;
+  snakeX += velocityX * blockSize;
+  snakeY += velocityY * blockSize;
 
   context.fillStyle = "red";
   context.fillRect(foodX, foodY, blockSize, blockSize);
