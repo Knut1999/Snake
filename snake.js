@@ -9,6 +9,9 @@ var context;
 var snakeX = blockSize * 5;
 var snakeY = blockSize * 5;
 
+velocityX = 0;
+velocityY = 0;
+
 //food
 var foodX;
 var foodY;
@@ -20,7 +23,10 @@ window.onload = function () {
   context = board.getContext("2d"); //tegner brett
 
   placeFood();
-  update();
+  document.addEventListener("keyup", changeDirection);
+
+  //update();
+  setInterval(update, 100/10);
 }
 
 function update() {
@@ -29,11 +35,32 @@ function update() {
 
   context.fillStyle = "lime";
   context.fillRect(snakeX, snakeY, blockSize, blockSize);
+  snakeX += velocityX;
+  snakey += velocityY;
 
   context.fillStyle = "red";
   context.fillRect(foodX, foodY, blockSize, blockSize);
 }
 
+function changeDirection(e) {
+  if(e.code == "ArrowUp"){
+    velocityX = 0;
+    VelocityY = -1;
+  }
+  else if (e.code == "ArrowDown"){
+    velocityX = 0;
+    velocityY = 1;
+  }
+  else if (e.code == "ArrowLeft"){
+    velocityX = -1;
+    velocityY = 0;
+  }
+  else if (e.code == "ArrowRight"){
+    velocityX = 1;
+    velocityY = 0;
+  }
+
+}
 
 function placeFood() {
   foodX = Math.floor(Math.random() * kolonner) * blockSize;
