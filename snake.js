@@ -71,7 +71,7 @@ function update() {
     alert("Game Over")
   }
 
-  for (let i = 0; i < snakeBody; i++){
+  for (let i = 0; i < snakeBody.length; i++){
     if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
       GameOver = true;
       alert("Game Over")
