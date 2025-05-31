@@ -33,13 +33,13 @@ function update() {
   context.fillStyle = "black";
   context.fillRect(0, 0, board.width, board.height);
 
+  context.fillStyle = "red";
+  context.fillRect(foodX, foodY, blockSize, blockSize);
+
   context.fillStyle = "lime";
   context.fillRect(snakeX, snakeY, blockSize, blockSize);
   snakeX += velocityX * blockSize;
   snakeY += velocityY * blockSize;
-
-  context.fillStyle = "red";
-  context.fillRect(foodX, foodY, blockSize, blockSize);
 }
 
 function changeDirection(e) {
