@@ -7,8 +7,7 @@ var snake_hodeY = 10;
 var snake_kropp = [];
 
 window.onload = function() {
-  spill_brett = document.getElementById("board");
-  spill_brett.height = rad * squere_size;
-  spill_brett.length = kolonne * squere_size;
-  spill_brett.style = 
+  board = document.getElementById("board");
+  board.width = kolonne * squere_size;
+  board.height = rad * squere_size;
 }
