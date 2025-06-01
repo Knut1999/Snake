@@ -32,18 +32,20 @@ function update() {
   context.fillStyle = "black";
   context.fillRect(0, 0, board.width, board.height)
 
+  context.fillStyle = "red";
+  context.fillRect(mat_X, mat_Y, squere_size, squere_size)
+
+  
   context.fillStyle = "lime";
   snake_hodeX += hastighetX * squere_size;
   snake_hodeY += hastighetY * squere_size;
   context.fillRect(snake_hodeX, snake_hodeY, squere_size, squere_size)
-  
-  context.fillStyle = "red";
-  context.fillRect(mat_X, mat_Y, squere_size, squere_size)
+
 }
 
 function random_mat() {
-  mat_X = Math.random() * kolonne * squere_size;
-  mat_Y = Math.random() * rad * squere_size;
+  mat_X = (Math.random() * kolonne) * squere_size;
+  mat_Y = (Math.random() * rad) * squere_size;
 }
 
 function retning(e) {
