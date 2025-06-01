@@ -26,9 +26,9 @@ window.onload = function() {
 function update() {
 
   context.fillStyle = "lime";
-  context.fillRect(snake_hodeX, snake_hodeY, squere_size, squere_size)
   snake_hodeX += hastighetX;
   snake_hodeY += hastighetY;
+  context.fillRect(snake_hodeX, snake_hodeY, squere_size, squere_size)
   
   context.fillStyle = "red";
   context.fillRect(mat_X, mat_Y, squere_size, squere_size)
