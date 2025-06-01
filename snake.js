@@ -72,7 +72,7 @@ function update() {
   if (snake_hodeX < 0){
     snake_hodeX = 30 * squere_size;
   }
-  else if (snake_hodeX > board.length * squere_size){
+  else if (snake_hodeX > rad * squere_size){
     snake_hodeX = 0;
   }
 }
