@@ -69,9 +69,8 @@ function update() {
     }
   }
 
-  if (snake_hodeX < 0 || snake_hodeX > rad * squere_size || snake_hodeY < 0 || snake_hodeY > kolonne * squere_size){
-    GameOver = true;
-    alert("gaaameroveer")
+  if (snake_hodeX < 0){
+    snake_hodeX = board.length;
   }
 }
 
