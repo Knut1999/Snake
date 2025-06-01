@@ -10,8 +10,8 @@ var snake_kropp = [];
 var mat_X;
 var mat_Y; 
 
-var hastighetX = 1;
-var hastighetY = 0;
+var hastighetX = 1 * squere_size;
+var hastighetY = 0 * squere_size;
 
 window.onload = function() {
   board = document.getElementById("board");
