@@ -10,6 +10,9 @@ var snake_kropp = [];
 var mat_X;
 var mat_Y; 
 
+var hastighetX = 1;
+var hastighetY = 0;
+
 window.onload = function() {
   board = document.getElementById("board");
   board.width = kolonne * squere_size;
@@ -24,6 +27,8 @@ function update() {
 
   context.fillStyle = "lime";
   context.fillRect(snake_hodeX, snake_hodeY, squere_size, squere_size)
+  snake_hodeX += velocityX;
+  snake_hodeY += velocityY;
   
   context.fillStyle = "red";
   context.fillRect(mat_X, mat_Y, squere_size, squere_size)
@@ -33,3 +38,4 @@ function random_mat() {
   mat_X = Math.random() * kolonne * squere_size;
   mat_Y = Math.random() * rad * squere_size;
 }
+
