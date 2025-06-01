@@ -21,7 +21,7 @@ window.onload = function() {
   random_mat();
 
   // sett retning
-  retning.addEventListener('keyup', retning)
+  document.addEventListener('keyup', retning)
   // retning satt
 
   setInterval(update, 1000/10)
