@@ -41,7 +41,7 @@ function update() {
     snake_kropp[i] = snake_kropp[i-1]
   }
   if (snakeBody.length) {
-    snakeBody[0] = [snakeX, snakeY];
+    snake_kropp[0] = [snakeX, snakeY];
   }
 
   context.fillStyle = "red";
