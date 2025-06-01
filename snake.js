@@ -40,6 +40,9 @@ function update() {
   for (let i = snake_kropp.length-1; i > 0; i--){
     snake_kropp[i] = snake_kropp[i-1]
   }
+  if (snakeBody.length) {
+    snakeBody[0] = [snakeX, snakeY];
+  }
 
   context.fillStyle = "red";
   context.fillRect(mat_X, mat_Y, squere_size, squere_size)
