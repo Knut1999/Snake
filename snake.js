@@ -11,7 +11,7 @@ var mat_X;
 var mat_Y; 
 
 var hastighetX = 1;
-var hastighetY = 1;
+var hastighetY = 0;
 
 window.onload = function() {
   board = document.getElementById("board");
