@@ -20,7 +20,8 @@ window.onload = function() {
   context = board.getContext("2d"); //for å tegne på canvas
   random_mat();
 
-  update();
+  setInterval(update(), 1000/10)
+  //update();
 }
 
 function update() {
