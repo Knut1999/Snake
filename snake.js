@@ -10,8 +10,8 @@ var snake_kropp = [];
 var mat_X;
 var mat_Y; 
 
-var hastighetX = 1 * squere_size;
-var hastighetY = 0 * squere_size;
+var hastighetX;
+var hastighetY;
 
 window.onload = function() {
   board = document.getElementById("board");
@@ -51,6 +51,17 @@ function retning(e) {
     hastighetX = 0;
     hastighetY = -1;
   }
-
-
+  else if ("ArrowRight" || hastighetX != -1){
+    hastighetX = 1;
+    hastighetY = 0;
+  }
+  else if ("ArrowLeft" || hastighetX != 1){
+    hastighetX = -1;
+    hastighetY = 0;
+  }
+  else if ("ArrowDown" || hastighetY != -1){
+    hastighetX = 0;
+    hastighetY = 1;
+  }
+  
 }
