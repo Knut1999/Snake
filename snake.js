@@ -44,8 +44,8 @@ function update() {
 }
 
 function random_mat() {
-  mat_X = (Math.random() * kolonne) * squere_size;
-  mat_Y = (Math.random() * rad) * squere_size;
+  mat_X = Math.floor(Math.random() * kolonne) * squere_size;
+  mat_Y = Math.floor(Math.random() * rad) * squere_size;
 }
 
 function retning(e) {
