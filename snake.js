@@ -70,7 +70,7 @@ function update() {
   }
 
   if (snake_hodeX < 0){
-    snake_hodeX = board.length;
+    snake_hodeX = 10;
   }
 }
 
