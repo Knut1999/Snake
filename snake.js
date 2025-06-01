@@ -14,7 +14,7 @@ window.onload = function() {
   board = document.getElementById("board");
   board.width = kolonne * squere_size;
   board.height = rad * squere_size;
-  context = board.getContext("2s"); //for å tegne på canvas
+  context = board.getContext("2d"); //for å tegne på canvas
 
   update();
 }
