@@ -13,6 +13,8 @@ var mat_Y;
 var hastighetX = 1;
 var hastighetY = 0;
 
+var GameOver = false;
+
 window.onload = function() {
   board = document.getElementById("board");
   board.width = kolonne * squere_size;
@@ -28,7 +30,12 @@ window.onload = function() {
   //update();
 }
 
+
 function update() {
+  if (GameOver) {
+    return;
+  }
+
   context.fillStyle = "black";
   context.fillRect(0, 0, board.width, board.height)
 
@@ -53,6 +60,18 @@ function update() {
   context.fillRect(snake_hodeX, snake_hodeY, squere_size, squere_size);
   for (let i = 0; i < snake_kropp.length; i++){
     context.fillRect(snake_kropp[i][0], snake_kropp[i][1], squere_size, squere_size);
+  }
+  //game over
+  for (let i = 0; i<snake_kropp.length; i++){
+    if (snake_hodeX == snake_kropp[i][0] && snake_hodeY == snake_kropp[i][1]){
+      GameOver = true;
+      alert("Game ooooveeer")
+    }
+  }
+
+  if (snake_hodeX < 0 || snake_hodeX > rad * squere_size || snake_hodeY < 0 || snake_hodeY > kolonne * squere_size){
+    GameOver = true;
+    alert("gaaameroveer")
   }
 }
 
