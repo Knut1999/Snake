@@ -40,7 +40,7 @@ function update() {
   for (let i = snake_kropp.length-1; i > 0; i--){
     snake_kropp[i] = snake_kropp[i-1]
   }
-  if (snakeBody.length) {
+  if (snake_kropp.length) {
     snake_kropp[0] = [snakeX, snakeY];
   }
 
