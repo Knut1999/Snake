@@ -63,5 +63,5 @@ function retning(e) {
     hastighetX = 0;
     hastighetY = 1;
   }
-
+  
 }
