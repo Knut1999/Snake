@@ -24,7 +24,7 @@ window.onload = function() {
   document.addEventListener('keyup', retning)
   // retning satt
 
-  setInterval(update, 1000)
+  setInterval(update, 100)
   //update();
 }
 
