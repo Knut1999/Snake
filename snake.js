@@ -8,7 +8,7 @@ var snake_hodeY = 10 * squere_size;
 var snake_kropp = [];
 
 var mat_X = 15 * squere_size;
-var mat_Y = 15 * squere_size;
+var mat_Y = 15 * squere_size; 
 
 window.onload = function() {
   board = document.getElementById("board");
@@ -16,6 +16,10 @@ window.onload = function() {
   board.height = rad * squere_size;
   context = board.getContext("2s"); //for å tegne på canvas
 
+  update();
+}
+
+function update() {
   context.fillStyle = "lime";
-  context.fillRect(mat_X, mat_Y, squere_size, squere_size)
+  context.fillRect(snake_hodeX, snake_hodeY, squere_size, squere_size)
 }
