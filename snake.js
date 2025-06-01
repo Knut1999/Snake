@@ -15,6 +15,7 @@ window.onload = function() {
   board.width = kolonne * squere_size;
   board.height = rad * squere_size;
   context = board.getContext("2d"); //for å tegne på canvas
+  random_mat();
 
   update();
 }
@@ -28,7 +29,7 @@ function update() {
   context.fillRect(mat_X, mat_Y, squere_size, squere_size)
 }
 
-function random() {
+function random_mat() {
   mat_X = Math.random() * kolonne * squere_size;
   mat_Y = Math.random() * rad * squere_size;
 }
