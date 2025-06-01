@@ -33,8 +33,8 @@ function update() {
   context.fillRect(0, 0, board.width, board.height)
 
   context.fillStyle = "lime";
-  snake_hodeX += hastighetX;
-  snake_hodeY += hastighetY;
+  snake_hodeX += hastighetX * squere_size;
+  snake_hodeY += hastighetY * squere_size;
   context.fillRect(snake_hodeX, snake_hodeY, squere_size, squere_size)
   
   context.fillStyle = "red";
@@ -47,8 +47,21 @@ function random_mat() {
 }
 
 function retning(e) {
-  if ("ArrowUp"){
+  if ("ArrowUp" || hastighetY != 1){
     hastighetX = 0;
     hastighetY = -1;
   }
+  else if ("ArrowRight" || hastighetX != -1){
+    hastighetX = 1;
+    hastighetY = 0;
+  }
+  else if ("ArrowLeft" || hastighetX != 1){
+    hastighetX = -1;
+    hastighetY = 0;
+  }
+  else if ("ArrowDown" || hastighetY != -1){
+    hastighetX = 0;
+    hastighetY = 1;
+  }
+
 }
