@@ -20,6 +20,10 @@ window.onload = function() {
   context = board.getContext("2d"); //for å tegne på canvas
   random_mat();
 
+  // sett retning
+  retning.addEventListener('keyup', retning)
+  // retning satt
+
   setInterval(update, 1000/10)
   //update();
 }
@@ -42,3 +46,9 @@ function random_mat() {
   mat_Y = Math.random() * rad * squere_size;
 }
 
+function retning(e) {
+  if ("ArrowUp"){
+    hastighetX = 0;
+    hastighetY = -1;
+  }
+}
