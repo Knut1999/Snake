@@ -47,19 +47,19 @@ function random_mat() {
 }
 
 function retning(e) {
-  if ("ArrowUp" || hastighetY != 1){
+  if ("ArrowUp" && hastighetY != 1){
     hastighetX = 0;
     hastighetY = -1;
   }
-  else if ("ArrowRight" || hastighetX != -1){
+  else if ("ArrowRight" && hastighetX != -1){
     hastighetX = 1;
     hastighetY = 0;
   }
-  else if ("ArrowLeft" || hastighetX != 1){
+  else if ("ArrowLeft" && hastighetX != 1){
     hastighetX = -1;
     hastighetY = 0;
   }
-  else if ("ArrowDown" || hastighetY != -1){
+  else if ("ArrowDown" && hastighetY != -1){
     hastighetX = 0;
     hastighetY = 1;
   }
