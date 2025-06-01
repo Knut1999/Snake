@@ -32,12 +32,17 @@ function update() {
   context.fillStyle = "black";
   context.fillRect(0, 0, board.width, board.height)
 
-  context.fillStyle = "red";
-  context.fillRect(mat_X, mat_Y, squere_size, squere_size)
-
   if(snake_hodeX == mat_X && snake_hodeY == mat_Y){
+    snake_kropp.push([mat_X, mat_Y])
     random_mat();
   }
+
+  for (let i = snake_kropp.length-1; i > 0; i--){
+    snake_kropp[i] = snake_kropp[i-1]
+  }
+
+  context.fillStyle = "red";
+  context.fillRect(mat_X, mat_Y, squere_size, squere_size)
   
   context.fillStyle = "lime";
   snake_hodeX += hastighetX * squere_size;
