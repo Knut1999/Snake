@@ -35,6 +35,9 @@ function update() {
   context.fillStyle = "red";
   context.fillRect(mat_X, mat_Y, squere_size, squere_size)
 
+  if(snake_hodeX == mat_X && snake_hodeY == mat_Y){
+    random_mat();
+  }
   
   context.fillStyle = "lime";
   snake_hodeX += hastighetX * squere_size;
@@ -67,3 +70,4 @@ function retning(e) {
   }
   
 }
+
