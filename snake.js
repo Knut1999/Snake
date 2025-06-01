@@ -1,4 +1,4 @@
-var squere_size = 30;
+var squere_size = 20;
 var rad = 30;
 var kolonne = 30;
 var snake_hodeX = 10;
