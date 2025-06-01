@@ -26,7 +26,7 @@ window.onload = function() {
 
 function update() {
   context.fillStyle = "black";
-  context.fillRect(0, 0, rad, kolonne)
+  context.fillRect(0, 0, board.width, board.height)
 
   context.fillStyle = "lime";
   snake_hodeX += hastighetX;
