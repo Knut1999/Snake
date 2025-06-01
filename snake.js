@@ -47,8 +47,10 @@ function update() {
   context.fillStyle = "lime";
   snake_hodeX += hastighetX * squere_size;
   snake_hodeY += hastighetY * squere_size;
-  context.fillRect(snake_hodeX, snake_hodeY, squere_size, squere_size)
-
+  context.fillRect(snake_hodeX, snake_hodeY, squere_size, squere_size);
+  for (let i = 0; snake_kropp.length; i++){
+    context.fillRect(snake_kropp[i][0], snake_kropp[i][1], squere_size, squere_size);
+  }
 }
 
 function random_mat() {
