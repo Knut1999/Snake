@@ -51,17 +51,6 @@ function retning(e) {
     hastighetX = 0;
     hastighetY = -1;
   }
-  else if ("ArrowRight" || hastighetX != -1){
-    hastighetX = 1;
-    hastighetY = 0;
-  }
-  else if ("ArrowLeft" || hastighetX != 1){
-    hastighetX = -1;
-    hastighetY = 0;
-  }
-  else if ("ArrowDown" || hastighetY != -1){
-    hastighetX = 0;
-    hastighetY = 1;
-  }
-  
+
+
 }
