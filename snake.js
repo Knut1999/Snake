@@ -1,105 +1,12 @@
-//board
-var blockSize = 25;
-var rader = 20;
-var kolonner = 20;
-var board;
-var context;
+var squere_size = 30;
+var rad = 30;
+var kolonne = 30;
+var snake_hodeX = 10;
+var snake_hodeY = 10;
 
-//snake head
-var snakeX = blockSize * 5;
-var snakeY = blockSize * 5;
+var snake_kropp = [];
 
-var velocityX = 0;
-var velocityY = 0;
-
-var snakeBody = [];
-
-
-//food
-var foodX;
-var foodY;
-
-var GameOver = false;
-
-window.onload = function () {
-  board = document.getElementById("board");
-  board.height = rader * blockSize;
-  board.width = kolonner * blockSize;
-  context = board.getContext("2d"); //tegner brett
-
-  placeFood();
-  document.addEventListener("keyup", changeDirection);
-
-  //update();
-  setInterval(update, 1000/10);
-}
-
-function update() {
-  if (GameOver) {
-    return;
-  }
-
-  context.fillStyle = "black";
-  context.fillRect(0, 0, board.width, board.height);
-
-  context.fillStyle = "red";
-  context.fillRect(foodX, foodY, blockSize, blockSize);
-
-  if(snakeX == foodX && snakeY == foodY){
-    snakeBody.push([foodX,foodY])
-    placeFood();
-  }
-
-  for (let i = snakeBody.length-1; i > 0; i--){
-    snakeBody[i] = snakeBody[i-1];
-  }
-  if (snakeBody.length) {
-    snakeBody[0] = [snakeX, snakeY];
-  }
-
-  context.fillStyle = "lime";
-  snakeX += velocityX * blockSize;
-  snakeY += velocityY * blockSize;
-  context.fillRect(snakeX, snakeY, blockSize, blockSize);
-  for (let i = 0; i < snakeBody.length; i++){
-    context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
-  }
-
-  //game over condition
-  if (snakeX < 0 || snakeX > kolonner * blockSize || snakeY < 0 || snakeY > rader * blockSize){
-    GameOver = true;
-    alert("Game Over")
-  }
-
-  for (let i = 0; i < snakeBody.length; i++){
-    if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) {
-      GameOver = true;
-      alert("Game Over")
-    }
-  }
-}
-
-function changeDirection(e) {
-  if(e.code == "ArrowUp" && velocityY != 1){
-    velocityX = 0;
-    velocityY = -1;
-  }
-  else if (e.code == "ArrowDown" && velocityY != -1){
-    velocityX = 0;
-    velocityY = 1;
-  }
-  else if (e.code == "ArrowLeft" && velocityX != 1){
-    velocityX = -1;
-    velocityY = 0;
-  }
-  else if (e.code == "ArrowRight" && velocityX != -1){
-    velocityX = 1;
-    velocityY = 0;
-  }
-
-}
-
-function placeFood() {
-  foodX = Math.floor(Math.random() * kolonner) * blockSize;
-  foodY = Math.floor(Math.random() * rader) * blockSize;
+window.onload = function() {
+  const spill_brett = document.getElementById("gameCanvas");
+  const spill_brett_ctx = gameCanvas.getContext("2d");
 }
