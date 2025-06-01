@@ -10,4 +10,5 @@ window.onload = function() {
   spill_brett = document.getElementById("board");
   spill_brett.height = rad * squere_size;
   spill_brett.length = kolonne * squere_size;
+  spill_brett.style = 
 }

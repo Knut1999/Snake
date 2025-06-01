@@ -15,3 +15,7 @@
 h1 {
     border-bottom: none;
 }
+
+#board {
+    background-color: black;
+}
