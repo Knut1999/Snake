@@ -70,16 +70,16 @@ function update() {
   }
 
   if (snake_hodeX < 0){
-    snake_hodeX = 30 * squere_size;
+    snake_hodeX = (rad-1) * squere_size;
   }
-  else if (snake_hodeX > rad * squere_size){
-    snake_hodeX = -1 * squere_size;
+  else if (snake_hodeX > ((rad-1) * squere_size)){
+    snake_hodeX = 0 * squere_size;
   }
   else if (snake_hodeY < 0){
-    snake_hodeY = 30 * squere_size;
+    snake_hodeY = (kolonne-1) * squere_size;
   }
-  else if (snake_hodeY > kolonne * squere_size){
-    snake_hodeY = -1 * squere_size;
+  else if (snake_hodeY > ((kolonne-1) * squere_size)){
+    snake_hodeY = 0 * squere_size;
   }
 }
 
