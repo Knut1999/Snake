@@ -1,4 +1,4 @@
-var squere_size = 20;
+var squere_size = window.innerWidth < 600 ? 10 : 20;
 var rad = 30;
 var kolonne = 30;
 
